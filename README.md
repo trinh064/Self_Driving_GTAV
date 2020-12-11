@@ -24,11 +24,14 @@ Procedure: <br />
 -Angles are weighted by their lengths so that longer lines are larger deciding factors comparing to short lines.
 -Positive average angle: turn right, negative average angle: turn left
 <br />
+
 Shortcomings:<br />
 - Adaptive threshold does not always solve the problem, there can still be a lot of noises with the determined threshold
 - Any other vehicles passed by would also be seen as lines and would deviate the decision
 <br />
+
 Execution:<br />
+
 To run:<br />
 -Run GTAV, change resolution to 640x800 windowed, and move it to topleft corner of the screen (use Alt+Tab to free the arrow)
 -In the terminal type command: python run.py (make sure you have all the following libraries: numpy,PIL,cv2,time,pyautogui,scipy,math)
