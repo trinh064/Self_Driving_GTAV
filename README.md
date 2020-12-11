@@ -37,6 +37,6 @@ Execution:<br />
 <br />
 2)To exit:<br />
 -On the terminal, press Ctrl+C
-<br />
+<br /><br />
 Acknowledgement:<br />
 Inspired by sentdex: https://www.youtube.com/watch?v=rvnHikUJ9T0&t=273s
