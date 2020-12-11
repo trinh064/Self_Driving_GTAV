@@ -31,12 +31,11 @@ Shortcomings:<br />
 <br />
 
 Execution:<br />
-
-To run:<br />
+1)To run:<br />
 -Run GTAV, change resolution to 640x800 windowed, and move it to topleft corner of the screen (use Alt+Tab to free the arrow)<br />
 -In the terminal type command: python run.py (make sure you have all the following libraries: numpy,PIL,cv2,time,pyautogui,scipy,math)<br />
 <br />
-To exit:<br />
+2)To exit:<br />
 -On the terminal, press Ctrl+C
 <br />
 Acknowledgement:<br />
