@@ -12,29 +12,29 @@ Procedure: <br />
 -Compute homography matrix
 -Warp the input image
 <br />
-2)Lines segmentation:
+2)Lines segmentation:<br />
 -Apply Gaussian filter to blur out noises
 -Apply Sober operation for edges detection. Then apply a threshold to filter out unimportant edges, most notably are road cracks and rough surfaces
 -Perform Hough transform to detect lines. The lines are probabilistic meaning that they do not run across the screen but are segments with starting points and ending points. A line must have a minimum length to be considered
 -The most challenging part was determining the threshold since the lighting constantly changes
 =>Adaptive threshold: increase or decrease the threshold such that the number of detected lines are not to dense but also not too sparse. 
 <br />
-3)Make decision:
+3)Make decision:<br />
 -Average the lines’ angles with respect to the screen vertical axis.
 -Angles are weighted by their lengths so that longer lines are larger deciding factors comparing to short lines.
 -Positive average angle: turn right, negative average angle: turn left
 <br />
-Shortcomings:
+Shortcomings:<br />
 - Adaptive threshold does not always solve the problem, there can still be a lot of noises with the determined threshold
 - Any other vehicles passed by would also be seen as lines and would deviate the decision
 <br />
-Execution:
-To run:
+Execution:<br />
+To run:<br />
 -Run GTAV, change resolution to 640x800 windowed, and move it to topleft corner of the screen (use Alt+Tab to free the arrow)
 -In the terminal type command: python run.py (make sure you have all the following libraries: numpy,PIL,cv2,time,pyautogui,scipy,math)
 <br />
-To exit:
+To exit:<br />
 -On the terminal, press Ctrl+C
 <br />
-Acknowledgement:
+Acknowledgement:<br />
 Inspired by sentdex: https://www.youtube.com/watch?v=rvnHikUJ9T0&t=273s
