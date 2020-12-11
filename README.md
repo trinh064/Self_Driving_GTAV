@@ -1,6 +1,8 @@
 # Self_Driving_GTAV
 Perform lanes segmentation from the first person perspective of the vehicle and make a decision to turn left or right.
 
+![GitHub Logo](/selfdvgta.png)
+
 Objective:
 -Based upon the first person view obtained by the vehicle, segment the lanes and road boundaries.
 -The first person view in the video game is almost the same as the real-life view, with various lighting, reflections, occlusions. The agent has to overcome these obstacles.   
