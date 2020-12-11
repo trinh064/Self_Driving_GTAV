@@ -8,21 +8,21 @@ Objective:
 
 Procedure: <br />
 1)Convert to birdview perspective:
--Choose 4 points in the first person view and 4 corresponding points in the birdview
--Compute homography matrix
--Warp the input image
+- Choose 4 points in the first person view and 4 corresponding points in the birdview
+- Compute homography matrix
+- Warp the input image
 <br />
 2)Lines segmentation:<br />
--Apply Gaussian filter to blur out noises
--Apply Sober operation for edges detection. Then apply a threshold to filter out unimportant edges, most notably are road cracks and rough surfaces
--Perform Hough transform to detect lines. The lines are probabilistic meaning that they do not run across the screen but are segments with starting points and ending points. A line must have a minimum length to be considered
--The most challenging part was determining the threshold since the lighting constantly changes
+- Apply Gaussian filter to blur out noises
+- Apply Sober operation for edges detection. Then apply a threshold to filter out unimportant edges, most notably are road cracks and rough surfaces
+- Perform Hough transform to detect lines. The lines are probabilistic meaning that they do not run across the screen but are segments with starting points and ending points. A line must have a minimum length to be considered
+- The most challenging part was determining the threshold since the lighting constantly changes
 =>Adaptive threshold: increase or decrease the threshold such that the number of detected lines are not to dense but also not too sparse. 
 <br />
 3)Make decision:<br />
--Average the lines’ angles with respect to the screen vertical axis.
--Angles are weighted by their lengths so that longer lines are larger deciding factors comparing to short lines.
--Positive average angle: turn right, negative average angle: turn left
+- Average the lines’ angles with respect to the screen vertical axis.
+- Angles are weighted by their lengths so that longer lines are larger deciding factors comparing to short lines.
+- Positive average angle: turn right, negative average angle: turn left
 <br />
 
 Shortcomings:<br />
@@ -33,8 +33,8 @@ Shortcomings:<br />
 Execution:<br />
 
 To run:<br />
--Run GTAV, change resolution to 640x800 windowed, and move it to topleft corner of the screen (use Alt+Tab to free the arrow)
--In the terminal type command: python run.py (make sure you have all the following libraries: numpy,PIL,cv2,time,pyautogui,scipy,math)
+- Run GTAV, change resolution to 640x800 windowed, and move it to topleft corner of the screen (use Alt+Tab to free the arrow)
+- In the terminal type command: python run.py (make sure you have all the following libraries: numpy,PIL,cv2,time,pyautogui,scipy,math)
 <br />
 To exit:<br />
 -On the terminal, press Ctrl+C
